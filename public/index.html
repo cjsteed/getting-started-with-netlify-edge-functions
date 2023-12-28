@@ -25,12 +25,47 @@
             max-width: 80%;
             margin: auto;
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
         }
 
-        /* Existing CSS... */
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
 
         header .highlight, header .current a {
             color: #e8491d;
@@ -38,13 +73,40 @@
             text-shadow: 0 0 5px #e8491d, 0 0 10px #e8491d, 0 0 15px #e8491d, 0 0 20px #e8491d;
         }
 
-        /* Fiery effect with blue and black colors */
-        .fiery-text {
-            color: #00f;
-            text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #00f, 0 0 20px #00f, 0 0 25px #00f, 0 0 30px #00f, 0 0 35px #00f;
+        header a:hover,
+        header a.active {
+            background-color: #555;
+            color: #e8491d;
+            font-weight: bold;
         }
 
-        /* Responsive design adjustments */
+        .about, .skills, .contact {
+            padding: 50px 0;
+            color: #333;
+        }
+
+        .about h1, .skills h1, .contact h1,
+        .about h2, .skills h2, .contact h2,
+        .about p, .skills p, .contact p {
+            margin-bottom: 20px;
+        }
+
+        .about h1, .skills h1, .contact h1 {
+            font-size: 2.5em;
+        }
+
+        .about img, .skills img, .contact img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .about p, .skills p, .contact p {
+            clear: both;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -54,7 +116,7 @@
                 padding: 0 10px;
             }
 
-            .about img {
+            .about img, .skills img, .contact img {
                 width: 100%;
                 margin: 0 0 20px 0;
                 float: none;
@@ -62,36 +124,77 @@
         }
 
         /* Add additional styles here if needed */
-
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
-                <h1 class="fiery-text"><span class="highlight">CJ</span> the Web Developer</h1>
+                <h1><span class="highlight">CJ</span> the Web Developer</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current"><a href="about.html">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="about" id="about">
+    <section id="home" class="home">
+        <!-- Home content goes here -->
         <div class="container">
-            <h1 class="fiery-text">About CJ</h1>
-            <img src="https://www.wallpaperup.com/uploads/wallpapers/2013/08/10/130802/2843e940d7a7e27acc4e9b97110b3925.jpg" alt="CJ Profile Picture">
-            <h2 class="fiery-text">The Cool Developer Who Builds Cool Stuff</h2>
+            <h1>Welcome to CJ's World</h1>
+            <p>This is the home section.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <!-- About content goes here -->
+        <div class="container">
+            <h1>About CJ</h1>
+            <img src="https://via.placeholder.com/150" alt="CJ Profile Picture">
             <p>
-                CJ is not your average web developer. With a love for innovation and a flair for the creative, he has a reputation for building websites and applications that are not only functional but also visually striking and engaging. His approach to development is holistic, ensuring that every project he works on is optimized for performance, accessibility, and user experience.
+                CJ is not your average web developer...
             </p>
             <!-- Additional paragraphs... -->
         </div>
     </section>
+
+    <section id="skills" class="skills">
+        <!-- Skills content goes here -->
+        <div class="container">
+            <h1>CJ's Skills</h1>
+            <p>This is the skills section.</p>
+            <!-- Additional content... -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <!-- Contact content goes here -->
+        <div class="container">
+            <h1>Contact CJ</h1>
+            <p>This is the contact section.</p>
+            <!-- Additional content... -->
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to add 'active' class to the clicked navigation link
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(function(lnk) {
+                        lnk.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
