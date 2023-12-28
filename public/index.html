@@ -3,143 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CJ the Web Developer</title>
+    <title>About CJ the Web Developer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             color: #333;
             background-color: #f4f4f4;
+            background: url('https://www.wallpaperup.com/uploads/wallpapers/2013/08/10/130802/2843e940d7a7e27acc4e9b97110b3925.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: drive 10s linear infinite;
+        }
+
+        @keyframes drive {
+            from { background-position: 0 0; }
+            to { background-position: -1000px 0; }
         }
 
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header ul li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        header #branding {
-            float: left;
-        }
-
-        header #branding h1 {
-            margin: 0;
-        }
-
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
+        /* Existing CSS... */
 
         header .highlight, header .current a {
             color: #e8491d;
             font-weight: bold;
+            text-shadow: 0 0 5px #e8491d, 0 0 10px #e8491d, 0 0 15px #e8491d, 0 0 20px #e8491d;
         }
 
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
+        /* Add fiery effect to headings */
+        .fiery-text {
+            color: #f73;
+            text-shadow: 0 0 5px #f73, 0 0 10px #f73, 0 0 15px #f73, 0 0 20px #f73, 0 0 25px #f73, 0 0 30px #f73, 0 0 35px #f73;
         }
 
-        .showcase {
-            min-height: 400px;
-            background: url('img/semi-truck.jpg') no-repeat center center; /* Updated background */
-            background-size: cover;
-            text-align: center;
-            color: #ffffff;
-        }
+        /* Add additional styles here if needed */
 
-        .showcase h1,
-        .showcase p {
-            color: #007bff; /* Making text blue */
-        }
-
-        .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-
-        .showcase p {
-            font-size: 20px;
-        }
-
-        .about,
-        .skills {
-            padding: 50px 0;
-            background: #ffffff;
-            color: #333; /* Ensuring text is visible */
-        }
-
-        .about h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #007bff; /* Making text blue */
-        }
-
-        .about p,
-        .skills p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .skills ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills ul li {
-            display: inline-block;
-            width: 30%;
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333333;
-        }
-
-        .skills ul li:before {
-            content: '✔';
-            margin-right: 8px;
-            color: #e8491d;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
-                <h1><span class="highlight">CJ</span> the Web Developer</h1>
+                <h1 class="fiery-text"><span class="highlight">CJ</span> the Web Developer</h1>
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="about.html">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -147,44 +66,16 @@
         </div>
     </header>
 
-    <section class="showcase">
-        <div class="container">
-            <h1>Welcome to CJ's World of Web Development</h1>
-            <p>Creating modern and responsive web designs for the digital age.</p>
-        </div>
-    </section>
-
     <section class="about" id="about">
         <div class="container">
-            <h2>About CJ</h2>
+            <h1 class="fiery-text">About CJ</h1>
+            <img src="https://www.wallpaperup.com/uploads/wallpapers/2013/08/10/130802/2843e940d7a7e27acc4e9b97110b3925.jpg" alt="CJ Profile Picture">
+            <h2 class="fiery-text">The Cool Developer Who Builds Cool Stuff</h2>
             <p>
-                CJ is a professional web developer with over 5 years of experience in designing and developing user-friendly websites. With a passion for technology and a keen eye for design, CJ has worked with a variety of clients to bring their ideas to life. His dedication to quality and innovation has resulted in numerous successful projects that are both aesthetically pleasing and functionally robust.
+                CJ is not your average web developer. With a love for innovation and a flair for the creative, he has a reputation for building websites and applications that are not only functional but also visually striking and engaging. His approach to development is holistic, ensuring that every project he works on is optimized for performance, accessibility, and user experience.
             </p>
-            <p>
-                He holds a degree in Computer Science and is constantly updating his skills to keep up with the latest trends in web development. When he's not coding, CJ enjoys attending tech conferences, contributing to open-source projects, and blogging about his latest discoveries in web technologies.
-            </p>
+            <!-- Additional paragraphs... -->
         </div>
     </section>
-
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5 & CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React & Redux</li>
-                <li>Node.js & Express</li>
-                <li>MongoDB & SQL</li>
-                <li>Responsive Web Design</li>
-                <li>Version Control (Git)</li>
-                <li>User Experience (UX)</li>
-                <li>Search Engine Optimization (SEO)</li>
-                <li>Web Performance Optimization</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Add other sections as needed... -->
-
 </body>
 </html>
