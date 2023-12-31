@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            color: #333;
-            background: url('https://www.wallpaperup.com/uploads/wallpapers/2013/08/10/130802/2843e940d7a7e27acc4e9b97110b3925.jpg') no-repeat center center fixed;
+            color: #fff;
+            background: url('https://via.placeholder.com/1920x1080?text=Semi+Truck+on+Light+Road') no-repeat center center fixed;
             background-size: cover;
             animation: drive 10s linear infinite;
         }
@@ -27,14 +27,15 @@
             overflow: hidden;
             padding: 20px;
             border-radius: 10px;
+            background: rgba(255, 255, 255, 0.5); /* semi-transparent white background for readability */
         }
 
         header {
-            background: #333;
+            background: #000080; /* navy blue */
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            border-bottom: #FF0000 3px solid; /* red accent */
         }
 
         header a {
@@ -60,6 +61,7 @@
 
         header #branding h1 {
             margin: 0;
+            color: #FF0000; /* red accent */
         }
 
         header nav {
@@ -67,44 +69,49 @@
             margin-top: 10px;
         }
 
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-            text-shadow: 0 0 5px #e8491d, 0 0 10px #e8491d, 0 0 15px #e8491d, 0 0 20px #e8491d;
-        }
-
         header a:hover,
         header a.active {
-            background-color: #555;
-            color: #e8491d;
+            color: #FF0000; /* red accent */
             font-weight: bold;
         }
 
         .about, .skills, .contact {
             padding: 50px 0;
-            color: #333;
-        }
-
-        .about h1, .skills h1, .contact h1,
-        .about h2, .skills h2, .contact h2,
-        .about p, .skills p, .contact p {
-            margin-bottom: 20px;
+            color: #000080; /* navy blue */
         }
 
         .about h1, .skills h1, .contact h1 {
             font-size: 2.5em;
+            color: #FF0000; /* red accent */
         }
 
         .about img, .skills img, .contact img {
             float: left;
             margin-right: 20px;
             border-radius: 50%;
+            border: 3px solid #FF0000; /* red border */
         }
 
         .about p, .skills p, .contact p {
             clear: both;
             font-size: 18px;
             line-height: 1.6;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .skills ul li:before {
+            content: "⭐";
+            color: #FF0000; /* red accent */
+            margin-right: 5px;
         }
 
         @media (max-width: 768px) {
@@ -167,7 +174,11 @@
         <!-- Skills content goes here -->
         <div class="container">
             <h1>CJ's Skills</h1>
-            <p>This is the skills section.</p>
+            <ul>
+                <li>Truck Driver</li>
+                <li>Web Developer</li>
+                <li>Snowboarder</li>
+            </ul>
             <!-- Additional content... -->
         </div>
     </section>
